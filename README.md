@@ -84,21 +84,15 @@ To build docker and run database, you will need some env vars:
 
 This repository have an env-docker.example, you can just copy and write the values that you want.
 
-````sh
+```sh
 touch env-docker.sh
 echo 'export POSTGRES_DB=kanastra
     export POSTGRES_USER=postgres
-    export POSTGRES_PASSWORD=test### Install the project packages
-
-```sh
-pip install -r requirements.txt
-````
-
+    export POSTGRES_PASSWORD=test
     export POSTGRES_PORT=5432
 
     export DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:${POSTGRES_PORT}/${POSTGRES_DB}' >> env-docker.sh
-
-````
+```
 
 ### Build the Docker Image
 
@@ -106,7 +100,7 @@ To build the Docker image, run the following command:
 
 ```sh
 make build
-````
+```
 
 ### Run the database Docker Container
 
